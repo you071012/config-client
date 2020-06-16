@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo")
 public class DemoController {
 
-    @Value("${test}")
-    private String test;
+    @Value("${name}")
+    private String name;
+
+    @RequestMapping("/index")
+    public String index(){
+        return name;
+    }
 }
